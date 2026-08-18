@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monse Grand Prix</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header class="hero">
+    <p class="eyebrow">EXCLUSIVO PARA</p>
+    <h1>MONSE <span>GRAND PRIX</span></h1>
+    <p class="subtitle">No es una carrera cualquiera… es una vuelta para dejarte sin palabras.</p>
+
+    <div class="status-bar">
+      <div><small>PILOTO</small><strong>Monse</strong></div>
+      <div><small>PISTA</small><strong>Neon Velocity</strong></div>
+      <div><small>RETO</small><strong>Robar una sonrisa</strong></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="game-card">
+      <div class="game-top">
+        <div>
+          <p class="eyebrow">MINIJUEGO</p>
+          <h2>Conduce hacia el mensaje secreto</h2>
+        </div>
+        <button id="restartBtn">↻ Reiniciar</button>
+      </div>
+
+      <div class="scoreboard">
+        <div class="score-item">
+          <span>VELOCIDAD</span>
+          <strong id="speed">0</strong>
+          <small>KM/H</small>
+        </div>
+        <div class="score-item">
+          <span>ENERGÍA</span>
+          <strong id="energy">100</strong>
+          <small>%</small>
+        </div>
+        <div class="score-item">
+          <span>ESTRELLAS</span>
+          <strong id="starsScore">0</strong>
+          <small>/ 8</small>
+        </div>
+      </div>
+
+      <div class="track-wrap">
+        <canvas id="raceCanvas" width="900" height="470"></canvas>
+        <div id="gameMessage" class="game-message">
+          <strong>¿Lista para acelerar?</strong>
+          <span>Usa ← → o A / D para mover el auto.</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn" id="leftBtn">←</button>
+        <button class="boost-btn" id="boostBtn">⚡ ACTIVAR TURBO</button>
+        <button class="control-btn" id="rightBtn">→</button>
+      </div>
+
+      <p class="help">Recoge las estrellas moradas y evita los conos. Cuando consigas las 8, desbloquearás la sorpresa.</p>
+    </section>
+
+    <section class="challenge-section">
+      <div class="section-heading">
+        <p class="eyebrow">PIT STOP</p>
+        <h2>Elige tu energía para esta carrera</h2>
+      </div>
+
+      <div class="choices">
+        <button class="choice" data-answer="cool">😎<span>Modo increíble</span></button>
+        <button class="choice" data-answer="magic">✨<span>Modo mágico</span></button>
+        <button class="choice" data-answer="legend">🏁<span>Modo leyenda</span></button>
+      </div>
+
+      <p id="choiceResult" class="choice-result">Elige una opción, Monse.</p>
+    </section>
+
+    <section id="surprise" class="surprise hidden">
+      <div class="trophy">🏆</div>
+      <p class="eyebrow">MISIÓN COMPLETADA</p>
+      <h2>Monse, tú eres la razón de que esta pista tenga luz.</h2>
+      <p>
+        Entre tantos caminos, curvas y vueltas, hay uno que se siente distinto:
+        el que lleva a una conversación contigo.
+      </p>
+      <button id="confettiBtn">Lanzar celebración ✦</button>
+    </section>
+  </main>
+
+  <footer>
+    <span>MONSE GRAND PRIX</span> · Diseñado para una piloto que merece una pista única.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
